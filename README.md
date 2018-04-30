@@ -25,3 +25,4 @@ Based on the work of Beemster, go check it out here
 https://github.com/beemster/profittrailer \
 Forked from 
 https://github.com/rafffael/profit-trailer/
+No credit goes to myself.
