@@ -2,11 +2,11 @@
 
 BASE=/opt
 APP=/app
-PT="ProfitTrailer"
+PT="ProfitTrailer-2.0.3"
 
-PT_DIR=$APP/$PT
+PT_DIR=$APP/ProfitTrailer
 PT_ZIP=$BASE/${PT}.zip
-PT_JAR=$PT_DIR/${PT}.jar
+PT_JAR=$PT_DIR/ProfitTrailer.jar
 PT_START="java -jar $PT_JAR -XX:+UseConcMarkSweepGC -Xmx256m -Xms256m"
 
 [ -d "$PT_DIR" ] || mkdir "$PT_DIR" || {
