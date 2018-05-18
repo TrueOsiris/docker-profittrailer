@@ -1,5 +1,5 @@
 FROM openjdk:8
-ENV PT_DL=https://github.com/taniman/profit-trailer/releases/download/2.0.5/ProfitTrailer-2.0.5.zip
+ENV PT_DL=https://github.com/taniman/profit-trailer/releases/download/2.0.6/ProfitTrailer-2.0.6.zip
 VOLUME ["/app/ProfitTrailer"]
 ADD $PT_DL /opt
 ADD docker-entrypoint.sh /
