@@ -2,7 +2,7 @@
 
 BASE=/opt
 APP=/app
-PT="ProfitTrailer-2.0.7"
+PT="ProfitTrailer-2.0.12"
 
 PT_DIR=$APP/ProfitTrailer
 PT_ZIP=$BASE/${PT}.zip
