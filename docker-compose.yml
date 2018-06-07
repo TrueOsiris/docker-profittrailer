@@ -8,10 +8,3 @@ services:
     restart: always
     ports:
       - "8081:8081/tcp"
-#  bot2:
-#    build: .
-#    volumes:
-#      - ./bot2:/app/ProfitTrailer
-#    restart: always
-#    ports:
-#      - "8081:8081/tcp"
