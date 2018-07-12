@@ -2,12 +2,12 @@
 
 BASE=/opt
 APP=/app
-PT="ProfitTrailer-2.0.12"
+PT="ProfitTrailer-2.0.14"
 
 PT_DIR=$APP/ProfitTrailer
 PT_ZIP=$BASE/${PT}.zip
 PT_JAR=$PT_DIR/ProfitTrailer.jar
-PT_START="java -jar $PT_JAR -XX:+UseConcMarkSweepGC -Xmx1024m -Xms256m"
+PT_START="java -jar $PT_JAR -XX:+UseConcMarkSweepGC -Xmx2048m -Xms256m"
 
 [ -d "$PT_DIR" ] || mkdir "$PT_DIR" || {
    echo "Error: no $PT_DIR found and could not make it. Exiting."; exit -1;
