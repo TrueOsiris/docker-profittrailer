@@ -1,6 +1,6 @@
 ProfitTrailer for Docker
 ------------------------
-Current profittrailer version: v2.0.12
+Current profittrailer version: v2.0.14
 
 **ProfitTrailer** is a smart crypto currency trading bot. It gives you the ability to trade using different exchanges in a fast and simple way.
 For easier deployment, I set up a *Docker Container*.
