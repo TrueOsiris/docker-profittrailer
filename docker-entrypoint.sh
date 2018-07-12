@@ -12,7 +12,7 @@ PT_START="java -jar $PT_JAR -XX:+UseConcMarkSweepGC -Xmx1024m -Xms256m"
 [ -d "$PT_DIR" ] || mkdir -p "$PT_DIR" || {
    echo "Error: no $PT_DIR found and could not make it. Exiting."; exit -1;
 }
-unzip -joqd ${PT_DIR} ${PT_ZIP} ${PT}-${PT_VERSION}/${PT}.jar || {
+unzip -joqd ${PT_DIR} ${PT_ZIP} ${PT}/${PT}.jar || {
   echo "Error: no $PT jar found. Exiting."; exit -1;
 }
 cd ${PT_DIR} || {
