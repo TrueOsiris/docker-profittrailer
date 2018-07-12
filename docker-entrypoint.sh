@@ -9,18 +9,15 @@ PT_ZIP=$BASE/${PT}.zip
 PT_JAR=$PT_DIR/ProfitTrailer.jar
 PT_START="java -jar $PT_JAR -XX:+UseConcMarkSweepGC -Xmx2048m -Xms256m"
 
-[ -d "$PT_DIR" ] || mkdir "$PT_DIR" || {
+[ -d "$PT_DIR" ] || mkdir -p "$PT_DIR" || {
    echo "Error: no $PT_DIR found and could not make it. Exiting."; exit -1;
 }
-#unzip -od $APP $PT_ZIP $PT/ProfitTrailer.jar || {
-unzip -od $APP $PT_ZIP ProfitTrailer/ProfitTrailer.jar || {
-  echo "Error: no $PT_JAR found. Exiting."; exit -1;
+unzip -joqd ${PT_DIR} ${PT_ZIP} ${PT}-${PT_VERSION}/${PT}.jar || {
+  echo "Error: no $PT jar found. Exiting."; exit -1;
 }
-cd $PT_DIR || {
+cd ${PT_DIR} || {
   echo "Error: problem with $PT_DIR. Exiting."; exit -1;
 }
-mv -f $APP/$PT/ProfitTrailer.jar $PT_DIR/
-rmdir $APP/$PT
 
 pcnt=$(/bin/ls -1 $PT_DIR/*.properties 2>/dev/null|/usr/bin/wc -l)
 [[ $pcnt -gt 0 ]] || {
