@@ -1,6 +1,9 @@
 ProfitTrailer for Docker
 ------------------------
-Current profittrailer version: v2.0.14
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/trueosiris/profittrailer.svg)](https://hub.docker.com/r/trueosiris/profittrailer/) [![Docker Stars](https://img.shields.io/docker/stars/trueosiris/profittrailer.svg)](https://hub.docker.com/r/trueosiris/profittrailer/) [![Docker Automated buil](https://img.shields.io/docker/automated/trueosiris/profittrailer.svg)](https://hub.docker.com/r/trueosiris/profittrailer/) [![Docker Build Statu](https://img.shields.io/docker/build/trueosiris/profittrailer.svg)](https://hub.docker.com/r/trueosiris/profittrailer/) ![GitHub last commit](https://img.shields.io/github/last-commit/trueosiris/docker-profittrailer.svg)
+
+Current profittrailer version: v2.0.16
 
 **ProfitTrailer** is a smart crypto currency trading bot. It gives you the ability to trade using different exchanges in a fast and simple way.
 For easier deployment, I set up a *Docker Container*.
