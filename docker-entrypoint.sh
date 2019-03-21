@@ -5,7 +5,7 @@ APP=/app
 PT="ProfitTrailer"
 
 PT_DIR=${APP}/${PT}                       # /app/ProfitTrailer
-PT_ZIP=${BASE}/${PT}-${PT_VERSION}.zip    # /opt/ProfitTrailer-2.0.16.zip
+PT_ZIP=${BASE}/${PT}-${PT_VERSION}.zip    # /opt/ProfitTrailer-2.x.xx.zip
 PT_JAR=${PT_DIR}/${PT}.jar                # /app/ProfitTrailer/ProfitTrailer.jar
 PT_START="java -jar $PT_JAR -XX:+UseConcMarkSweepGC -Xmx384m -Xms256m"
 
@@ -22,7 +22,7 @@ cd ${PT_DIR} || {
 pcnt=$(/bin/ls -1 $PT_DIR/*.properties 2>/dev/null|/usr/bin/wc -l)
 [[ $pcnt -gt 0 ]] || {
   echo "No properties found, extracting..."; unzip -o $PT_ZIP -d $APP;
-  mv ${BASE}/${PT}-${PT_VERSION}/* ${APP}/${PT}/ 2>&1 
+  #mv ${BASE}/${PT}-${PT_VERSION}/* ${APP}/${PT}/ 2>&1 
   echo "Done! Now, edit your configuration files and reload the container."
   exit -1;
 } || {
@@ -31,4 +31,4 @@ pcnt=$(/bin/ls -1 $PT_DIR/*.properties 2>/dev/null|/usr/bin/wc -l)
 }
 
 # start it
-$PT_START
+${PT_START}
