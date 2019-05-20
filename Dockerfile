@@ -4,5 +4,6 @@ ENV PT_DL=https://github.com/taniman/profit-trailer/releases/download/${PT_VERSI
 VOLUME ["/app/ProfitTrailer"]
 ADD ${PT_DL} /opt
 ADD docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 CMD ["/docker-entrypoint.sh"]
 EXPOSE 8081
